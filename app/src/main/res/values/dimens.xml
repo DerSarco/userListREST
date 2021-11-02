@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_text_width">240dp</dimen>
+    <dimen name="main_common_padding">16dp</dimen>
+    <dimen name="fragment_image_size">88dp</dimen>
+    <dimen name="main_min_padding">8dp</dimen>
+</resources>

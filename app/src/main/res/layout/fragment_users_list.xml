@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="@dimen/fragment_image_size"
+        android:layout_height="@dimen/fragment_image_size"
+        tools:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/constraintInfo"
+        android:contentDescription="@string/image_description"
+        android:layout_marginTop="@dimen/main_common_padding"
+        android:layout_marginStart="@dimen/main_min_padding"
+        android:scaleType="centerCrop"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/main_common_padding"
+        android:layout_marginHorizontal="@dimen/main_common_padding"
+        app:layout_constraintStart_toEndOf="@id/ivProfile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            tools:text="Name"
+            android:paddingVertical="@dimen/main_min_padding"
+            android:layout_marginVertical="@dimen/main_min_padding"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:paddingVertical="@dimen/main_min_padding"
+            android:layout_marginVertical="@dimen/main_min_padding"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            tools:text="Email"
+            android:layout_marginBottom="@dimen/main_common_padding"
+            app:layout_constraintTop_toBottomOf="@id/tvUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

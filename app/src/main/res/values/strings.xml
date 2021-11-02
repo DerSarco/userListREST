@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">userListREST</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="main_text_login">Login</string>
+    <string name="main_text_register">Register</string>
+    <string name="main_network_error">Error en el request</string>
+    <string name="main_text_user_watch">Ver Usuario</string>
+    <string name="image_description">avatar</string>
+    <string name="error_network_message">Error en la conexión</string>
+</resources>
