@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity(), MainAux {
         val fragmentTransaction = mFragmentManager.beginTransaction()
 
         fragmentTransaction.add(R.id.containerMain, userListFragment).addToBackStack(null).commit()
+        hideButton(false)
     }
 
     private fun login() {
@@ -90,9 +91,8 @@ class MainActivity : AppCompatActivity(), MainAux {
         mBinding.tvUserInfo.visibility = View.VISIBLE
     }
 
-    override fun buttonListVisible() {
-        mBinding.btnUserList.visibility = if(mBinding.btnUserList.visibility == View.GONE)
-            View.VISIBLE
+    override fun hideButton(isVisible: Boolean) {
+        mBinding.btnUserList.visibility = if(isVisible) View.VISIBLE
             else View.GONE
     }
 }

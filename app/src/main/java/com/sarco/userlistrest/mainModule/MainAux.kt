@@ -1,6 +1,7 @@
 package com.sarco.userlistrest.mainModule
 
+
 interface MainAux {
 
-    fun buttonListVisible()
+    fun hideButton(isVisible: Boolean = false)
 }

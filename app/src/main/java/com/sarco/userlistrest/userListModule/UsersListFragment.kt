@@ -1,5 +1,6 @@
 package com.sarco.userlistrest.userListModule
 
+import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -15,6 +16,7 @@ import com.sarco.userlistrest.R
 import com.sarco.userlistrest.UsersListApplication
 import com.sarco.userlistrest.common.utils.Constants
 import com.sarco.userlistrest.databinding.FragmentUsersListBinding
+import com.sarco.userlistrest.mainModule.MainActivity
 import org.json.JSONObject
 
 /**
@@ -25,12 +27,15 @@ import org.json.JSONObject
 class UsersListFragment : Fragment() {
 
     private lateinit var mBinding: FragmentUsersListBinding
+    private var mActivity: MainActivity? = null
+    private var buttonVisible: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         mBinding = FragmentUsersListBinding.inflate(inflater, container, false)
+        mActivity = activity as? MainActivity
         // Inflate the layout for this fragment
         return mBinding.root
     }
@@ -87,8 +92,8 @@ class UsersListFragment : Fragment() {
 
 
     override fun onDestroy() {
+        mActivity?.hideButton(true)
         super.onDestroy()
-
     }
 
 }
